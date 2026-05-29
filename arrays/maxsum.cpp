@@ -4,11 +4,11 @@ using namespace std;
 int maxsum(int arr[],int n){
 
  int sum=0;
-    int maxisum=0;
+    int maxisum=INT32_MIN ;
 for (int i =0;i<n;i++){
 
     sum = sum +arr[i];
-    if (maxisum<=sum) {maxisum =sum;}
+   maxisum = max(maxisum,sum);
     if (sum <=0){sum =0;}
 
     }
